@@ -38,7 +38,7 @@ public class Auth {
     }
     @Test(priority = 4)
     void bearerTokenAuth(){
-        String bearerToken = "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";
+        String bearerToken = "<YOUR_BEARER_TOKEN>";
         given()
                 .headers("Authorization", "Bearer "+bearerToken)
                 .when()
@@ -60,7 +60,7 @@ public class Auth {
     // the no. of parameters are reduced in oauth2 from oauth 1. here we just have to pass this token
     @Test(priority = 6)
     void oauth2Auth(){
-        String token = "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";
+        String token = "<YOUR_TOKEN>";
         given()
                 .auth().oauth2(token)
                 .when()
